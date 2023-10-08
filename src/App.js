@@ -30,11 +30,7 @@ const App = () => {
 
 	const addNewExpenseHandler = (expense) => {
 		setExpenses(prevExpenses => {
-			const newExpense = {
-				...expense,
-				id: 'e' + prevExpenses.length,
-			}
-			return [newExpense, ...prevExpenses];
+			return [expense, ...prevExpenses];
 		});
 	};
 
