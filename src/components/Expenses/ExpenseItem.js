@@ -6,20 +6,20 @@ import Card from '../UI/Card';
 import ExpenseDate from './ExpenseDate';
 
 const ExpenseItem = ({ date, amount, title }) => {
-    const [innerTitle, setTitle] = useState(title);
+    // const [innerTitle, setTitle] = useState(title);
 
-    const clickHandler = () => {
-        setTitle('Updated!');
-    }
+    // const clickHandler = () => {
+    //     setTitle('Updated!');
+    // }
 
     return (
         <Card className='expense-item'>
             <ExpenseDate date={date} />
             <div className='expense-item__text'>
-                <h2>{ innerTitle }</h2>
+                <h2>{ title }</h2>
                 <div className='expense-item__plate'>${ amount }</div>
             </div>
-            <button onClick={clickHandler}>Change title</button>
+            {/* <button onClick={clickHandler}>Change title</button> */}
         </Card>
     )
 }
